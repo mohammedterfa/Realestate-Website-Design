@@ -493,6 +493,36 @@ button {
   
 }
 
+.value__accordion{
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.value__accordion-item{
+  background-color: var(--body-color);
+  border: 2px solid var(--border-color);
+  border-radius:.5rem;
+  padding: 1rem .75rem;
+}
+
+.value__accordion-header{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.value__accordion-icon{
+  background-color: var(--first-color-lighten);
+  padding: 5px;
+  border-radius: .25rem;
+  font-size: 18px;
+  color: var(--first-color);
+  margin-left: .75rem;
+  transition: .3s;
+
+}
+
 
 
 /*Rotate icon and add shadows*/
