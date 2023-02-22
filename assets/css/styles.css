@@ -112,6 +112,7 @@ button {
   max-width: 1024px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  text-align: right;
 }
 
 .grid {
@@ -228,7 +229,14 @@ button {
 }
 
 /* Active link */
+.active-link{
+  background: linear-gradient(101deg,
+              hsl(228, 66%, 53%),
+              hsl(228, 66%, 47%));
 
+color: #fff;
+box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
+}
 
 /*=============== HOME ===============*/
 .home{
@@ -770,23 +778,303 @@ button {
 }
 
 
-/*=============== SCROLL BAR ===============*/
-
-
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up*/
-
-
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 350px) {
+  .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
+  .section{
+    padding: 3.5rem 0 1rem;
+  }
+
+  .home{
+    padding-bottom: 0;
+  }
+
+  .contact__card{
+    grid-template-columns: repeat(1, 180px);
+    justify-content: center;
+  }
+}
 
 /* For medium devices */
+@media screen and (min-width:576px){
+  .nav__menu{
+    width: 342px;
+  }
 
+  .home__search{
+    width: 412px;
+  }
+
+
+  .contact__card{
+    grid-template-columns: repeat(2,192px);
+    justify-content: center;
+  }
+
+
+  .footer__content{
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen and (min-width:767px){
+  .home__container{
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 2rem;
+  }
+
+  .home__orbe{
+    align-self: flex-end;
+
+  }
+
+  .home__data{
+    padding-bottom: 2rem;
+
+  }
+
+  .logos__container{
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+  }
+
+  .value__container,
+  .contact__container{
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+  }
+
+  .contact__images{
+    order: 1;
+  }
+
+  .contact__card{
+    justify-content: initial;
+  }
+
+  .footer__container{
+    grid-template-columns: repeat(2,max-content);
+    justify-content: space-between;
+  }
+}
 
 /* For large devices */
+@media screen and (min-width:1023px) {
+  .section{
+    padding: 7.5rem 0 1rem;
+    
+  }
 
+  .section__title{
+    font-size: 2.25rem;
+
+  }
+
+  .section__subtitle{
+    font-size: var(--normal-font-size);
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__menu{
+    width: initial;
+    margin-left: auto;
+
+  }
+
+  .nav__list{
+    display: flex;
+    column-gap: 3rem;
+  }
+
+  .nav__link{
+    color: var(--text-color-light);
+  }
+
+  .nav__link i{
+    display: none;
+  }
+
+  .nav__button{
+    display: inline-block;
+    margin: 0 5rem;
+  }
+
+  .active-link{
+    background: none;
+    box-shadow: none;
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+  }
+
+  .scroll-header .nav__link{
+    color: var(--text-color);
+  }
+
+  .scroll-header .active-link{
+    color: var(--first-color);
+  }
+
+  .home{
+    padding-bottom: 0;
+  }
+
+  .home__container{
+    padding-top: 5rem;
+    column-gap: 2rem;
+
+  }
+
+  .home__data{
+    padding-bottom: 4rem;
+
+  }
+
+  .home__title{
+    margin-bottom: 2rem;
+  }
+
+
+  .home__description,
+  .home__search{
+    margin-bottom: 3rem;
+  }
+
+  .home__value{
+    column-gap: 3.5rem;
+  }
+
+  .homw_orbe{
+    width: 504px;
+    height: 611px;
+    border-radius: 256px 256px 0 0 ;
+    
+  }
+
+  .home__img{
+    width: 472px;
+    height: 634px;
+    border-radius: 236px 236px 12px 12px;
+    bottom: -2.5rem;
+  }
+
+  .logos__img img{
+    height: 100px;
+  }
+
+  .popular__container{
+    padding-top: 3rem;
+    
+  }
+
+  .popular__card{
+    width: 320px;
+    padding: .75rem .75rem 2rem; 
+  }
+
+  .popular__data{
+    padding: 0 .25rem 0 .75rem;
+  }
+
+  .value__container,
+  .contact__container{
+    align-items: flex-start;
+    column-gap: 5rem;
+  }
+
+  .value__orbe,
+  .contact__orbe{
+    width: 501px;
+    height: 641px;
+    border-radius: 258px 258px 16px 16px;
+  }
+
+  .value__img,
+  .contact__img{
+    width: 461px;
+    height: 601px;
+    border-radius: 238px 238px 12px 12px;
+  }
+
+  .value__img img,
+  .contact__img img{
+    max-width: initial;
+    width: 490px;
+
+  }
+
+  .value___description,
+  .contact__description{
+    font-size: var(--normal-font-size);
+    margin-bottom: 2.5rem;
+
+  }
+
+  .value__accordion-title{
+    font-size: var(--normal-font-size);
+
+  }
+
+  .value__accordion-item{
+    padding: 1.25rem 1.25rem 1.25rem 1rem;
+  }
+
+  .value__accordion-description{
+    padding-bottom: 1rem;
+    font-size: var(--small-font-size);
+
+  }
+
+  .contact__card{
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  .contact__card-box{
+    padding: 28px 1.5rem 1.5rem;
+  }
+
+  .footer__content{
+    grid-template-columns: repeat(4, max-content);
+  }
+
+  .footer__title{
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__links{
+    row-gap: 1rem;
+  }
+
+  .footer__info{
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
+  }
+
+
+
+
+  
+}
 
 /* For 2K & 4K resolutions */
+
+@media screen and (min-width:1040px) {
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__container{
+    column-gap: 4rem;
+
+  }
+}
